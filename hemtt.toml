@@ -1,0 +1,19 @@
+name = "Grad Server Transfer System"
+prefix = "grad_servertransfersystem"
+author = "Salbei"
+files = [
+    "mod.cpp",
+    "logo_grad_ca.paa",
+    "LICENSE",
+    "README.md"
+]
+
+key_name = "{{prefix}}_{{version}}"
+authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
+
+releasebuild = [
+    "@zip grad_servertransfersystem_{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}"
+]
+
+[header_exts]
+version= "{{git \"id 8\"}}"
