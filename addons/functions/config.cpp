@@ -12,3 +12,19 @@ class CfgPatches {
     };
 };
 
+#include <CfgEventHandlers.hpp>
+#include "cfgSTS.hpp"
+
+class CfgFunctions
+{
+	class A3
+	{
+		class GUI
+		{
+			class initDisplay
+			{
+				file = QPATHTOF(functions\initDisplay.sqf);
+			};
+		};
+	};
+};
