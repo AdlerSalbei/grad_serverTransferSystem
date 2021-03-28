@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 disableserialization;
-params["_class","_display",["_show",false]];
+params["_class", "_display", ["_show",false]];
 
 
 _cfg = configFile >> "CfgSTS" >> _class;

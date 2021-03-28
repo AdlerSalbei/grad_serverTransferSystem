@@ -5,7 +5,7 @@ disableserialization;
 // not running
 params["_display"];
 
-_connectionData = uiNamespace getVariable [QGVAR(connectionData),[]];
+private _connectionData = uiNamespace getVariable [QGVAR(connectionData),[]];
 if(count(_connectionData) < 4) exitWith {
 	["STS > Warning (no autojoin set)"] call FUNC(TransferFailed);
 };

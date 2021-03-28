@@ -8,6 +8,8 @@ uiNamespace setVariable [QGVAR(renderOverlay),true];
 		(_x displayCtrl 22000) ctrlShow true;
 		(_x displayCtrl 22001) ctrlShow true;
 	};
+
+	diag_log format ["startOverlay: %1", GVAR(uidisplayRegistry)];
 	
 	with uiNamespace do {
 		_index = GVAR(uidisplayRegistry) find _x;

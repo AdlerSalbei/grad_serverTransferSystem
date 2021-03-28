@@ -3,6 +3,8 @@ PREP(displayInit);
 PREP(handleArmaUI);
 PREP(RscDiary);
 PREP(RscDisplayLoading);
+PREP(RscDisplayMission);
+PREP(RscDisplayMultiplayerSetup);
 PREP(Stage1);
 PREP(Stage2);
 PREP(Stage3);

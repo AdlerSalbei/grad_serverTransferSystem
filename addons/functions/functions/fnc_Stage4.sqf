@@ -7,12 +7,10 @@ if(count(_connectionData) < 2) exitWith {
 };
 
 _ctrlServerAddress = (findDisplay 19) displayCtrl 2300; 
-
 _ctrlServerAddress controlsGroupCtrl 101 ctrlSetText (_connectionData select 0);
 _ctrlServerAddress controlsGroupCtrl 102 ctrlSetText (_connectionData select 1);
 
 ctrlActivate (_ctrlServerAddress controlsGroupCtrl 1);
-
 
 onEachFrame (uiNamespace getVariable QFUNC(Stage5));
 

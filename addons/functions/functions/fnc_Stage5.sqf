@@ -1,12 +1,11 @@
 #include "script_component.hpp"
 //stage 5, waiting for the server list to populate with the desired server
 
-_ctrlServerList = (findDisplay 8) displayCtrl 102;
-					
-_data = _ctrlServerList lbData 0;
+private _ctrlServerList = (findDisplay 8) displayCtrl 102;				
+private _data = _ctrlServerList lbData 0;
 
 //check timeouts
-_timeout = uiNamespace getVariable [QGVAR(transferTimeout),-1];
+private _timeout = uiNamespace getVariable [QGVAR(transferTimeout),-1];
 
 if(_timeout == -1) exitWith {
 	["STS > Timeout (no timeout set)"] call FUNC(TransferFailed);
@@ -16,7 +15,7 @@ if(diag_tickTime > _timeout) exitWith {
 };
 
 // get connection data
-_connectionData = uiNamespace getVariable [QGVAR(connectionData),[]];
+private _connectionData = uiNamespace getVariable [QGVAR(connectionData),[]];
 if(count(_connectionData) < 2) exitWith {
 	["STS > Failed (no transfer info set)"] call FUNC(TransferFailed);
 };

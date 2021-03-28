@@ -11,7 +11,7 @@ uiNamespace setVariable [QGVAR(connectionData), [_ip,_port,_password]];
 
 diag_log "Transfer Start";
 
-call FUNC(startOverlay);
+//call FUNC(startOverlay);
 
 // start staging payloads
 onEachFrame (uiNamespace getVariable QFUNC(Stage1));

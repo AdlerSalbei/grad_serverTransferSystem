@@ -3,12 +3,12 @@ class CfgSTS
 	
 	class RscDisplayMultiplayerSetup
 	{
-		//onLoad = QPATHTOF(functions\RscDisplayMultiplayerSetup.sqf);
-		//ctrlOverride[] = {2,109,114,1086,1013,1015,134,133,135,136};
+		onLoad = QPATHTOF(functions\RscDisplayMultiplayerSetup.sqf);
+		ctrlOverride[] = {2,109,114,1086,1013,1015,134,133,135,136};
 	};
 	class RscDisplayMission
 	{
-		//onLoad = QPATHTOF(functions\RscDisplayMission.sqf);
+		onLoad = QPATHTOF(functions\RscDisplayMission.sqf);
 	};
 	class RscDisplayLoading
 	{
@@ -34,6 +34,60 @@ class RscStandardDisplay;
 class RscDisplayEmpty;
 class RscDisplayMPPlayers;
 class RscDisplayGetReady;
+class RscDisplayChannel
+{
+	onLoad = QUOTE(with uiNamespace do {ARR_2('RscDisplayChannel',_this select 0) call FUNC(DisplayInit)});
+	class controls
+	{
+		class IGUIBack_2200: IGUIBack
+		{
+			idc = 22000;
+			x = "0 * safezoneW + safezoneX";
+			y = "0 * safezoneH + safezoneY";
+			w = "1 * safezoneW";
+			h = "1 * safezoneH";
+			colorBackground[] = {0,0,0,1};
+			show = 0;
+		};
+		class RscText_1000: RscText
+		{
+			idc = 22001;
+			text = "PLEASE WAIT...";
+			x = "0.402031 * safezoneW + safezoneX";
+			y = "0.00500001 * safezoneH + safezoneY";
+			w = "0.201094 * safezoneW";
+			h = "0.077 * safezoneH";
+			show = 0;
+		};
+	};
+};
+class RscMPSetupMessage
+{
+	onLoad = QUOTE(with uiNamespace do {ARR_2('RscMPSetupMessage',_this select 0) call FUNC(DisplayInit)});
+	class controls
+	{
+		class IGUIBack_2200: IGUIBack
+		{
+			idc = 22000;
+			x = "0 * safezoneW + safezoneX";
+			y = "0 * safezoneH + safezoneY";
+			w = "1 * safezoneW";
+			h = "1 * safezoneH";
+			colorBackground[] = {0,0,0,1};
+			show = 0;
+		};
+		class RscText_1000: RscText
+		{
+			idc = 22001;
+			text = "PLEASE WAIT...";
+			x = "0.402031 * safezoneW + safezoneX";
+			y = "0.00500001 * safezoneH + safezoneY";
+			w = "0.201094 * safezoneW";
+			h = "0.077 * safezoneH";
+			show = 0;
+		};
+	};
+};
 class RscDisplayMainMap
 {
 	class controls
@@ -167,6 +221,58 @@ class RscDisplayClientGetReady: RscDisplayGetReady
 	};
 };
 class RscDisplayMission: RscDisplayEmpty
+{
+	class controls
+	{
+		class IGUIBack_2200: IGUIBack
+		{
+			idc = 22000;
+			x = "0 * safezoneW + safezoneX";
+			y = "0 * safezoneH + safezoneY";
+			w = "1 * safezoneW";
+			h = "1 * safezoneH";
+			colorBackground[] = {0,0,0,1};
+			show = 0;
+		};
+		class RscText_1000: RscText
+		{
+			idc = 22001;
+			text = "PLEASE WAIT...";
+			x = "0.402031 * safezoneW + safezoneX";
+			y = "0.00500001 * safezoneH + safezoneY";
+			w = "0.201094 * safezoneW";
+			h = "0.077 * safezoneH";
+			show = 0;
+		};
+	};
+};
+class RscDisplayIPAddress: RscStandardDisplay
+{
+	class controls
+	{
+		class IGUIBack_2200: IGUIBack
+		{
+			idc = 22000;
+			x = "0 * safezoneW + safezoneX";
+			y = "0 * safezoneH + safezoneY";
+			w = "1 * safezoneW";
+			h = "1 * safezoneH";
+			colorBackground[] = {0,0,0,1};
+			show = 1;
+		};
+		class RscText_1000: RscText
+		{
+			idc = 22001;
+			text = "PLEASE WAIT...";
+			x = "0.402031 * safezoneW + safezoneX";
+			y = "0.00500001 * safezoneH + safezoneY";
+			w = "0.201094 * safezoneW";
+			h = "0.077 * safezoneH";
+			show = 1;
+		};
+	};
+};
+class RscDisplayPassword: RscStandardDisplay
 {
 	class controls
 	{

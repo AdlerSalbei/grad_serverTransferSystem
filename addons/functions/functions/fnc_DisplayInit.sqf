@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params["_class","_display"];
+params["_class", "_display"];
 
 //register display for quick lookup
 with uiNamespace do {
